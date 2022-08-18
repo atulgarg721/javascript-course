@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>todo app Practice</title>
+    </head>
+    <body>
+        <button>Press</button>
+        <script>
+            let todos = ['get groceries', 'wash cars', 'make dinner'];
+            todos.push('another todos');
+            todos.push('new todos');
+            todos.forEach(function (todoTitle) {
+                let element = document.createElement('div');
+                element.innerText = todoTitle;
+                document.body.appendChild(element);
+            });
+            function toUpper(array1) {
+                array1.forEach(function (Up) {
+                let element = document.createElement('div');
+                element.innerText = Up.toUpperCase();
+                document.body.appendChild(element);
+            })
+            };
+            toUpper(['hello', 'world']);
+            function arrayDouble(doubly) {
+                doubly.forEach(function (string) {
+                    doubly.push(string);
+                });
+                console.log(doubly);
+            };
+            arrayDouble(['bark', 'meow']);
+
+        </script>
+    </body>
+</html>

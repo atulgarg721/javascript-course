@@ -4,7 +4,7 @@
         <title>todo app clone</title>
     </head>
     <body>
-        <button>Press</button>
+        <button onclick="todos.push('new todos')">Press</button>
         <script>
             let todos = ['get groceries', 'wash cars', 'make dinner'];
             todos.push('another todos');
@@ -14,14 +14,7 @@
                 element.innerText = todoTitle;
                 document.body.appendChild(element);
             });
-            function  toUpper(hello) {
-                hello.forEach (function (string) {
-                    let element = document.createElement('div');
-                    element.innerText = string.toUpper;
-                    document.body.append
-                });
-            };
-            toUpper(['hello', 'world']);
+
         </script>
     </body>
 </html>
