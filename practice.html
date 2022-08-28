@@ -4,6 +4,8 @@
         <title>todo app Practice</title>
     </head>
     <body>
+        <input id="todo-title" type="text">
+        <button id="todo-button" onclick="todoDone()"> Done</button>
         <button>Press</button>
         <script>
             let todos = ['get groceries', 'wash cars', 'make dinner'];
@@ -29,7 +31,10 @@
                 console.log(doubly);
             };
             arrayDouble(['bark', 'meow']);
-
+            function todoDone() {
+                let text = document.getElementById('todo-title');
+                text.value= 'Done';
+            }
         </script>
     </body>
 </html>
