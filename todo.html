@@ -11,13 +11,26 @@
         <script>
 
             //Model Section
-            let todos = [
+            //if localStorage has a array, then use it
+            //otherwise use the default array.
+
+            let todos;
+
+            //retrieve from local storage
+            //JSON.parse is to convert string into an array
+            const savedTodos = JSON.parse(localStorage.getItem('todos'));
+            //check if it is an array.
+            if (Array.isArray(savedTodos)) {
+                todos = savedTodos;
+            } else {
+                todos = [
                 { title : 'get groceries',
                 dueDate : '2022-08-30', id: 'id1'},
                 { title : 'wash cars',
                 dueDate : '2022-08-22', id: 'id2'},
                 {title : 'make dinner',
                 dueDate : '2022-07-25', id: 'id3'}];
+            }
             render();
 
             //create a todo
@@ -28,6 +41,8 @@
                     dueDate: dueDate,
                     id: id
                 });
+
+                saveTodos();
             }
             //delete a todo
             function removeTodo(idToDelete) {
@@ -39,6 +54,11 @@
                         }
                     });
 
+                    saveTodos();
+
+            }
+            function saveTodos() {
+                localStorage.setItem('todos', JSON.stringify(todos));
             }
 
              //Control Section
