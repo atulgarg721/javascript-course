@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript  Challenges (week2)</title>
+</head>
+<body>
+    <h1>JavaScript Basic Challenges !</h1>
+    <h2> Challenges 1-9</h2>
+
+    <script>
+        //Challenge No. 1 your name in console
+        let firstName = 'Atul';
+        let lastName = "Garg";
+        console.log(firstName);
+        console.log(lastName);
+
+        //Challenge No. 2 write your name with spaces in between in one line.
+
+        console.log(firstName + ' ' + lastName);
+
+        //Challenge No. 3 a variable using template and dsiplaying first two elements 
+         let adjective = 'Good Person';
+         console.log(`We all Know that ${firstName} ${lastName} is a ${adjective}`);
+
+         //Challenge No.4 prompt user to enter name
+         var name = prompt("What's your name ?",'');
+         console.log(`Hello ${name} and Welcome to WebPage!`);
+
+         //Challenge No.5 ask user for a whole Number
+         //Challenge No.6 check for a non-number input error
+         let number = prompt("Enter a Number",);
+         if(number < 10){
+            console.log("You entered a number smaller than 10");
+         } else if(number > 9){
+            console.log("You have entered a big number");
+         } else {
+            console.log("Error:  You have not entered a Number");
+         }
+    </script>
+</body>
+</html>

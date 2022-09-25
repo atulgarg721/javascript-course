@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Challenge</title>
+</head>
+<body>
+    <h1>Javascript Functions Challenge </h1>
+    <h2>Challenge 13</h2>
+
+    <script>
+
+        let userName = prompt("Enter Your Name here :","");
+
+        function hello(name) {
+            if(name == "" || name == null){
+            var greetings =  "You didn't give me your name!";
+
+        } else {
+            greetings = `hello ${name} and Welcoome to Webpage!`;
+        }
+        return greetings
+        }
+
+        console.log(hello(userName));
+
+        
+
+    </script>
+    
+</body>
+</html>

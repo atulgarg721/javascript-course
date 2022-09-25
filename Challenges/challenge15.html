@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Challenge</title>
+</head>
+<body>
+    <h1>Javascript Functions Challenge </h1>
+    <h2>Challenge 15</h2>
+
+    <script>
+
+        let userName = prompt("Enter Your Name here :","");
+        let gifts = ['Cheese', 'Coca-cola', 'Thandai', 'Tea', 'Coffee'];
+        function hello(name) {
+            if(name == "" || name == null){
+            var greetings =  "You didn't give me your name!";
+
+        } else {
+            greetings = `hello ${name} and Welcoome to Webpage!`;
+        }
+        return greetings
+        }
+
+       // console.log(hello(userName));
+        function hospitality(name , gift) {
+            console.log(hello(name));
+            for(var i=0; i<gift.length ; i++){
+                console.log(`${name} would you like some ${gift[i]} ?`);
+            }
+        }
+        hospitality(userName,gifts);
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>

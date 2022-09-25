@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops practice</title>
+</head>
+<body>
+    <h1>Loops and Sequence Practices ! </h1>
+
+    <script>
+        var i = 0;
+        var num;
+        for(i = 0; i<10 ; i++) {
+            
+           /*  num  = num + i;
+            console.log(num); */
+            console.log(i);
+        }
+        var colors = ['red','blue','pink','purple','yellow','orange','magenta'];
+        /* for( i=0 ; i < colors.length ; i++) {
+            console.log(colors[i]);
+        } */
+        for(var color of colors) {
+            console.log(color);
+        }
+        var string23 = 'this is a string and it can be used as an array';
+        console.log(string23.length);
+        for( var j = 0 ; j < string23.length ; j++ ) {
+            console.log(string23[j]);
+        }
+        let incre = 0;
+        let myText = '';
+        /* while(incre < 10){
+            myText += "The value has increased to " + incre + '\t';
+            incre++;
+        } */
+        // Now we can do same thing using templates in es6 
+
+        /* while(incre < 10 ) {
+            myText += `The value has been increased to ${incre} \n`;
+            incre++;
+        }
+        console.log(myText); */
+        let myString = 'I am really starving for some';
+        console.log(myString);
+        let myUpperString = myString.toUpperCase();
+        console.log(myUpperString);
+        let reallyLocation = myString.search('really');
+        console.log(reallyLocation);
+        let specialString = myString.substr(reallyLocation, 6);
+        console.log(specialString);
+        specialString = specialString.toUpperCase();
+        let newString = myString.replace('really',specialString);
+        console.log(newString);
+        let array12 = ['burger', 'Pizza', 'Maggie', 'French fries'];
+        console.log(`${myString} ${array12[0]}`);
+        var i = 0;
+        /* for(i = 0; i < array12.length; i++) {
+            console.log(`${myString} ${array12[i]}`)
+        }
+        for(var foods of array12) {
+            console.log(`${myString} ${foods}`)
+        } */
+        //Loop + Selection
+        for(var i=0; i<array12.length; i++){
+            if( i % 2 == 0){
+                console.log(`${myString} ${array12[i].toUpperCase()}`);
+            } else {
+                console.log(`${myString} ${array12[i]}`);
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Practice!</title>
+</head>
+<body>
+    <h1> Functions in JavaScript!</h1>
+    <script>
+
+        function check(){
+            let number = prompt("Enter a Number",);
+            if(number < 10){
+                console.log("You entered a number smaller than 10");
+                for(let i=0; i<10; i++) {
+                    console.log(`Here is the number ${i}`);
+                }
+            } else if(number > 9){
+                console.log("You have entered a big number");
+            } else {
+                console.log("Error:  You have not entered a Number");
+            }
+        };
+        // check();
+
+        function upperMessage(message){
+            let upperMessage = message.toUpperCase();
+            console.log(upperMessage);
+        }
+       // upperMessage(prompt("Enter your Message : ",""));
+        function numSum(num1 , num2) {
+            let numberSum = num1 + num2;
+            console.log(`The sum of two numbers ${num1} and ${num2} is ${numberSum}`);
+        }
+       // numSum(45,56);
+
+       //console.log(Math.random());
+
+       let foods = ['pav bhaji','idli','chole bhature','pizza', 'burger','hotdog','french fries'];
+
+        function randomInt(min, max) {
+            /* let numofvalue = max - min + 1;
+            let randomNum = Math.random();
+            let randomValue = randomNum * numofvalue;
+            let roundedRandomNumber = Math.floor(randomValue);
+            let finalNum = min + roundedRandomNumber; */
+            return Math.floor( (max - min + 1) * Math.random()) + min;
+       }
+
+       console.log( `Your's todays Random Food is ${foods[randomInt(0, foods.length-1)]}`)
+
+       let greetings = function(){
+        
+        console.log(`Hello there ${prompt("Enter your Name","")} welcome to website!`);
+       }
+       greetings();
+
+       
+
+
+   </script>
+</body>
+</html>
