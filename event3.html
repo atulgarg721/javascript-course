@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 >JacaScript Events</h1>
+    <h1 id="header">Scroll event capturing</h1>
+    <div>
+    </div>
+    <h1>Resize the window and watch the console</h1>
+    <h2 id="key">Press Any key</h2>
+
+    <script>
+        var pageTop;
+
+        //Practice of other events like Scroll
+        window.addEventListener('scroll',function(){
+            pageTop = window.pageYOffset;
+            console.log(pageTop, window.pageXOffset);
+        });
+
+        //Practice for resizing the window
+        window.addEventListener('resize', function(){
+            console.log(`The Window width is ${window.innerWidth}`);
+            console.log(`Window height is ${window.innerHeight}`)
+        });
+        //Practice for keydown and keyup events
+        var keyHeader = document.querySelector("#key");
+        document.addEventListener('keydown',function(event){
+            //alert("You hace pressed a key");
+            //at this you only get the number of key and it keeps changing so we use diffrent method
+            //keyHeader.innerHTML = `You have pressed ${event.which}`;
+            keyHeader.innerHTML = `You have Pressed ${event.key}`;
+        });
+        document.addEventListener('keyup', function(){
+            keyHeader.innerHTML = "Press Any Key to Type";
+        });
+
+
+
+    </script>
+    
+</body>
+</html>

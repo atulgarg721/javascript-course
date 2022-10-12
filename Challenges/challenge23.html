@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Challenge</title>
+</head>
+<body>
+    <h1>JavaScript Challenge Event Listner and Handler</h1>
+    <h2>Challenge 22</h2>
+    <p> This is a text in a paragraph for html</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quo amet, inventore id doloremque perspiciatis! Libero, delectus tenetur. Quas illo nisi repudiandae laborum. Est repellendus nobis totam consectetur, quisquam numquam!</p>
+    <p>The quick brown fox jump over the lazy dog.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aut ullam, fugiat odit iste optio nihil, recusandae unde illo officia magni. Optio placeat ullam exercitationem, provident ex officia eum ad.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate error, vero facilis molestiae consequuntur a aut, sed, inventore iusto blanditiis enim excepturi nesciunt? Tempore iure culpa tenetur, illo maiores ex!</p>
+    <button>Turn to Green!</button>
+
+    <script>
+        let btn = document.querySelector('button');
+        let allPara = document.querySelectorAll('p');
+        btn.addEventListener('click', () => {
+            for(var para of allPara){
+                para.style = "color: green";
+            }
+        })
+    </script>
+</body>
+</html>

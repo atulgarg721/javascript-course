@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Challenge</title>
+</head>
+<body>
+    <!--Challenge to get an input and change the size of h1 element-->
+
+
+    
+    <h1>JavaScript Challenge Event Listner and Handler</h1>
+    <h2>Challenge 27</h2>
+    <form method="get">
+        <label> Enter Number :<input type="text" ></label>
+        <input type="submit" value="send Number">
+    </form>
+    <script>
+        var formTag = document.querySelector('form');
+        var heading = document.querySelector('h1');
+        formTag.addEventListener('submit', function(evt){
+            evt.preventDefault();
+            var numSize = parseInt(document.querySelector('input').value);
+            if(numSize){
+                heading.style = `font-size: ${numSize}px`;
+            } else {
+                alert('Please enter a Number.');
+            }
+        });
+    </script>
+</body>
+</html>

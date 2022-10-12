@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Challenge</title>
+    <style>
+        .one {
+            background-color: beige;
+            transition: all 3s;
+        }
+        .two {
+            background-color: blueviolet;
+            transition: all 3s;
+        }
+        .three {
+            background-color: coral;
+            transition: all 3s;
+        }
+        .four {
+            background-color: cornflowerblue;
+            transition: all 3s;
+        }
+        .five {
+            background-color: darkgoldenrod;
+            transition: all 3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Challenge: Event Handlers </h1>
+    <h2>Challenge: 29</h2>
+    <p>Press the B key to turn the page biege</p>
+    <p>Press the V key to turn the page blueviolet</p>
+    <p>Press the C key to turn the page coral</p>
+    <p>Press the F key to turn the page cornflowerblue</p>
+    <p>Press the G key to turn the page darkgoldenrod</p>
+
+    <script>
+        var keyPress;
+        var bodyTag = document.querySelector('body');
+        window.addEventListener('keydown',function(event) {
+            keyPress = event.key;
+            if(keyPress === 'B'){
+                bodyTag.className = 'one';
+            } else if(keyPress === 'V'){
+                bodyTag.className = 'two';
+            } else if(keyPress === 'C'){
+                bodyTag.className = 'three';
+            } else if(keyPress === 'F'){
+                bodyTag.className = 'four';
+            } else if(keyPress === 'G'){
+                bodyTag.className = 'five';
+            } else {
+                alert('Please Press the Correct key if you want to change background.');
+            }
+        })
+    </script>
+    
+</body>
+</html>
